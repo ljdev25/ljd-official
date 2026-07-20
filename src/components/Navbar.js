@@ -6,6 +6,7 @@ const navLinks = [
   { label: "About Us", href: "/about" },
   { label: "Shop", href: "/shop" },
   { label: "Workshops", href: "/workshops" },
+  { label: "Blog", href: "/blog" },
   { label: "Newsroom", href: "/#newsroom" },
   { label: "Sustainability", href: "/sustainability" },
   { label: "Contact", href: "/contact" },
@@ -66,6 +67,12 @@ export default function Navbar() {
           {/* CTA + Hamburger */}
           <div className="flex items-center gap-3">
             <a
+              href="/admin"
+              className="hidden lg:inline text-[10px] font-semibold uppercase tracking-widest text-[var(--faint)] transition-colors hover:text-[var(--accent)]"
+            >
+              Admin
+            </a>
+            <a
               href="#contact"
               className="hidden sm:flex items-center px-5 py-2.5 text-xs font-semibold uppercase tracking-widest border border-[var(--ink)] text-[var(--ink)] transition-colors hover:bg-[var(--ink)] hover:text-white"
             >
@@ -124,6 +131,13 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
           >
             Partner With Us
+          </a>
+          <a
+            href="/admin"
+            className="block mt-4 text-center py-2 text-[10px] font-semibold uppercase tracking-widest text-[var(--faint)] hover:text-[var(--accent)] transition-colors"
+            onClick={() => setIsOpen(false)}
+          >
+            Admin
           </a>
         </div>
       </div>
